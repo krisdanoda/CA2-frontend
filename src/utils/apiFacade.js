@@ -1,4 +1,4 @@
-const URL = "http://localhost:8080";
+const URL = "https://kurisu-da-noda.com/CA2-startcode";
 
 function handleHttpErrors(res) {
     if (!res.ok) {
