@@ -8,6 +8,7 @@ import Header from "./components/Header.jsx";
 function App(props) {
 
     const [loggedIn, setLoggedIn] = useState(false)
+    const [username, setUsername] = useState('')
 
     const obj = {
         name: "TestName",
@@ -18,7 +19,7 @@ function App(props) {
 
     return (
         <>
-            <Header setLoggedIn={setLoggedIn} loggedIn={loggedIn}/>
+            <Header username={username} setUsername={setUsername} setLoggedIn={setLoggedIn} loggedIn={loggedIn}/>
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="search" element={<Search/>}/>
