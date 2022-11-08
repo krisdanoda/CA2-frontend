@@ -19,7 +19,7 @@ function Home(props) {
 
                     <h3>Backend</h3>
                     <p className="cursive"> To get your backend code deployed</p>
-                    1. Create a new database in mySQL Workbench on the remote Digital Ocean connection (user: root, PW: - MYSQL_ROOT_PASSWORD - (White and blue))<br/>
+                    1. Create a new database in mySQL Workbench on the remote Digital Ocean connection (User: root, PW: - MYSQL_ROOT_PASSWORD - (White and blue))<br/>
                     2. Create the same database as in the previous step locally (user: dev, PW: ax2)<br/>
                     3. In the pom.xml file:<br/>
                     <div className="homepageTextDiv">
@@ -32,7 +32,7 @@ function Home(props) {
                     6. In resources/META-INF/persistence.xml:<br/>
                     <div className="homepageTextDiv">
                         - On line 24 (or close to) make sure that the property value is a link to your remote database<br/>
-                        - Also make sure that the values on the two next lines corresponds to the correct user (root) and password (- MYSQL_ROOT_PASSWORD - (White and blue)) <br/>
+                        - Also make sure that the values on the two next lines correspond to the correct user (root) and password (- MYSQL_ROOT_PASSWORD - (White and blue)) <br/>
                     </div>
 
                     Your pipeline and github actions should now be working. Try to push something to main and see if github actions succeeds.
