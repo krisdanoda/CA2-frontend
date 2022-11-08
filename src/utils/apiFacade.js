@@ -1,8 +1,8 @@
+
 import settings from "../settings.js";
 
 const URL = settings;
 
-// const URL = "https://kurisu-da-noda.com/CA2-startcode";
 
 function handleHttpErrors(res) {
     if (!res.ok) {
@@ -44,6 +44,15 @@ function apiFacade() {
         const options = makeOptions("GET", true);
         return fetch(URL + "/api/info/user", options).then(handleHttpErrors);
     }
+    const fetchAdminData = () => {
+        const options = makeOptions("GET", true);
+        return fetch(URL + "/api/info/admin", options).then(handleHttpErrors);
+    }
+
+    const fetchJokes = () => {
+        const options = makeOptions("GET", true);
+        return fetch(URL + "/api/jokes", options).then(handleHttpErrors);
+    }
 
     function makeOptions(method, addToken, body) {
         method = method ? method : 'GET';
@@ -72,7 +81,9 @@ function apiFacade() {
         loggedIn,
         login,
         logout,
-        fetchData
+        fetchData,
+        fetchAdminData,
+        fetchJokes
     }
 }
 

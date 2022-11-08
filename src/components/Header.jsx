@@ -14,14 +14,16 @@ function Header({setErrorMsg, loggedIn, setLoggedIn, setUsername, username, role
             <NavLink className="active" to="/"><i className="fa fa-fw fa-home"></i> Home</NavLink>
             <NavLink to="/search"><i className="fa fa-fw fa-search"></i> Search</NavLink>
             <NavLink to="/contact"><i className="fa fa-fw fa-envelope"></i> Contact</NavLink>
-            {!loggedIn ? (<Login setRoles={setRoles} setUsername={setUsername} setLoggedIn={setLoggedIn}
-                                 setErrorMsg={setErrorMsg}/>) :
-                (<div>
-                    <div className="topnav">
+            <NavLink to="/jokes"><i className="fa fa-fw fa-envelope"></i> Jokes</NavLink>
+            {!loggedIn ? (<Login setRoles={setRoles} setUsername={setUsername} setLoggedIn={setLoggedIn} setErrorMsg={setErrorMsg}  />) :
+                (<>
+                    <NavLink to="/user"><i className="fa fa-fw"></i> User</NavLink>
+                    <NavLink to="/admin"><i className="fa fa-fw"></i> Admin</NavLink>
+                    <div>
+                    <Credentials username={username} roles={roles}/>
                     <LoggedIn setLoggedIn={setLoggedIn}/>
                     </div>
-                    <Credentials username={username} roles={roles}/>
-                </div>)}
+                </>)}
         </nav>
     );
 }
