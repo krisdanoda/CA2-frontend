@@ -1,7 +1,7 @@
 import React, {useRef, useState} from 'react';
 import facade from "../utils/apiFacade.js";
 
-function Login({setLoggedIn, setErrorMsg, setUsername}) {
+function Login({setLoggedIn, setErrorMsg, setUsername, setRoles}) {
     const init = {username: "", password: ""};
     const [loginCredentials, setLoginCredentials] = useState(init);
 
@@ -11,9 +11,10 @@ function Login({setLoggedIn, setErrorMsg, setUsername}) {
     }
 
     const login = (user, pass) => {
-        facade.login(user, pass)
-            .then(res => setLoggedIn(true))
+        facade.login(user, pass, setRoles)
+            .then(setLoggedIn(true))
             .then(setUsername(user))
+
     }
 
     const onChange = (evt) => {
