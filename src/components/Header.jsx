@@ -6,7 +6,7 @@ import "../styles/header.css";
 import Credentials from "./Credentials.jsx";
 
 
-function Header({setErrorMsg, loggedIn, setLoggedIn, setUsername, username}) {
+function Header({setErrorMsg, loggedIn, setLoggedIn, setUsername, username, roles, setRoles}) {
 
 
     return (
@@ -14,9 +14,9 @@ function Header({setErrorMsg, loggedIn, setLoggedIn, setUsername, username}) {
             <NavLink className="active" to="/"><i className="fa fa-fw fa-home"></i> Home</NavLink>
             <NavLink to="/search"><i className="fa fa-fw fa-search"></i> Search</NavLink>
             <NavLink to="/contact"><i className="fa fa-fw fa-envelope"></i> Contact</NavLink>
-            {!loggedIn ? (<Login setUsername={setUsername} setLoggedIn={setLoggedIn} setErrorMsg={setErrorMsg}  />) :
+            {!loggedIn ? (<Login setRoles={setRoles} setUsername={setUsername} setLoggedIn={setLoggedIn} setErrorMsg={setErrorMsg}  />) :
                 (<div>
-                    <Credentials username={username}/>
+                    <Credentials username={username} roles={roles}/>
                     <LoggedIn setLoggedIn={setLoggedIn}/>
                 </div>)}
         </nav>
