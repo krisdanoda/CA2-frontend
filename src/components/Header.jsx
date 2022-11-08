@@ -15,10 +15,13 @@ function Header({setErrorMsg, loggedIn, setLoggedIn, setUsername, username, role
             <NavLink to="/search"><i className="fa fa-fw fa-search"></i> Search</NavLink>
             <NavLink to="/contact"><i className="fa fa-fw fa-envelope"></i> Contact</NavLink>
             {!loggedIn ? (<Login setRoles={setRoles} setUsername={setUsername} setLoggedIn={setLoggedIn} setErrorMsg={setErrorMsg}  />) :
-                (<div>
+                (<>
+                    <NavLink to="/user"><i className="fa fa-fw"></i> User</NavLink>
+                    <div>
                     <Credentials username={username} roles={roles}/>
                     <LoggedIn setLoggedIn={setLoggedIn}/>
-                </div>)}
+                    </div>
+                </>)}
         </nav>
     );
 }
