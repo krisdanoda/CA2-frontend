@@ -1,4 +1,8 @@
-const URL = "https://kurisu-da-noda.com/CA2-startcode";
+import settings from "../settings.js";
+
+const URL = settings;
+
+// const URL = "https://kurisu-da-noda.com/CA2-startcode";
 
 function handleHttpErrors(res) {
     if (!res.ok) {
