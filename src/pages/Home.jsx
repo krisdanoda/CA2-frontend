@@ -18,7 +18,7 @@ function Home(props) {
                     </div>
 
                     <h3>Backend</h3>
-                    <p className="cursive"> To get your backend code to work </p>
+                    <p className="cursive"> To get your backend code deployed</p>
                     1. Create a new database in mySQL Workbench on the remote Digital Ocean connection (user: root, PW: - MYSQL_ROOT_PASSWORD - (White and blue))<br/>
                     2. Create the same database as in the previous step locally (user: dev, PW: ax2)<br/>
                     3. In the pom.xml file:<br/>
@@ -27,8 +27,20 @@ function Home(props) {
                         - Change the remote server (remote.server) to your domain name (ex. https://haj.com/manager/text) <br/>
                         - Change the database name (db.name) to the database you created in step 1. <br/>
                     </div>
-                    2. Clone Quick Start Project backend and frontend repos and delete the git folder<br/>
-                    2. Clone Quick Start Project backend and frontend repos and delete the git folder<br/>
+                    4. In MySQL create a test database locally<br/>
+                    5. In .github/workflows/mavenworkflow.yml change the name of DB_DATABASE to the test database you just created<br/>
+                    6. In resources/META-INF/persistence.xml:<br/>
+                    <div className="homepageTextDiv">
+                        - On line 24 (or close to) make sure that the property value is a link to your remote database<br/>
+                        - Also make sure that the values on the two next lines corresponds to the correct user (root) and password (- MYSQL_ROOT_PASSWORD - (White and blue)) <br/>
+                    </div>
+
+                    Your pipeline and github actions should now be working. Try to push something to main and see if github actions succeeds.
+
+                    <h3>Frontend</h3>
+                    <p className="cursive"> To get your frontend code deployed</p>
+
+                    1. Do something
                 </p>
             </div>
 
