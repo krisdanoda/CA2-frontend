@@ -7,13 +7,13 @@ body {
 
 .topnav {
     overflow: hidden;
-    background-color: #e9e9e9;
+    background-color: #e9e9e9; /*Navbar background colour*/
 }
 
 .topnav a {
     float: left;
     display: block;
-    color: black;
+    color: black; /*Default navbar buttons text colour*/
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -21,13 +21,13 @@ body {
 }
 
 .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #ddd; /*Navbar buttons hover colour*/
+    color: black; /*Navbar buttons hover text colour*/
 }
 
 .topnav a.active {
-    background-color: #2196F3;
-    color: white;
+    background-color: #2196F3; /*Navbar buttons colour*/
+    color: white; /*Navbar buttons text colour*/
 }
 
 .topnav .login-container {
@@ -47,15 +47,15 @@ body {
     padding: 6px 10px;
     margin-top: 8px;
     margin-right: 16px;
-    background-color: #555;
-    color: white;
+    background-color: #555; /*Login Button*/
+    color: white; /*Login button text colour*/
     font-size: 17px;
     border: none;
     cursor: pointer;
 }
 
 .topnav .login-container button:hover {
-    background-color: green;
+    background-color: green; /*Login button hover background colour*/
 }
 
 @media screen and (max-width: 600px) {
