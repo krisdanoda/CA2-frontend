@@ -6,6 +6,7 @@ export default function LoggedIn({setLoggedIn}) {
     const logout = () => {
         facade.logout()
         setLoggedIn(false)
+        window.location.reload()
     }
 
     return (
