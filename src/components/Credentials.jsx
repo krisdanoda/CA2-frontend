@@ -2,7 +2,7 @@ import React from 'react';
 
 function Credentials(props) {
     return (
-        <div style={{textAlign: 'right'}}>Username: {props.username} - Roles: {props.roles}</div>
+        <nav style={{textAlign: 'right'}}>Username: <b>{props.username}</b> - Roles: <b>{props.roles}</b></nav>
     );
 }
 
