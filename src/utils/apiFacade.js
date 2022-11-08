@@ -1,4 +1,4 @@
-const URL = "http://localhost:8080/CA2_startcode_war_exploded";
+const URL = "https://kurisu-da-noda.com/CA2-startcode";
 
 function handleHttpErrors(res) {
     if (!res.ok) {
@@ -41,6 +41,11 @@ function apiFacade() {
         return fetch(URL + "/api/info/user", options).then(handleHttpErrors);
     }
 
+    const fetchJokes = () => {
+        const options = makeOptions("GET", true);
+        return fetch(URL + "/api/jokes", options).then(handleHttpErrors);
+    }
+
     function makeOptions(method, addToken, body) {
         method = method ? method : 'GET';
         const opts = {
@@ -68,7 +73,8 @@ function apiFacade() {
         loggedIn,
         login,
         logout,
-        fetchData
+        fetchData,
+        fetchJokes
     }
 }
 

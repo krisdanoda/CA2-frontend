@@ -5,6 +5,7 @@ import Search from "./pages/Search.jsx";
 import Contact from "./pages/Contact.jsx";
 import Header from "./components/Header.jsx";
 import User from "./pages/User.jsx";
+import Jokes from "./pages/Jokes.jsx";
 
 function App(props) {
 
@@ -26,6 +27,7 @@ function App(props) {
                 <Route path="/" element={<Home/>}/>
                 <Route path="search" element={<Search/>}/>
                 <Route path="contact" element={<Contact address={obj}/>}/>
+                <Route path="jokes" element={<Jokes/>}/>
                 <Route path="user" element={<User/>}/>
                 <Route path="*" element={<h1>Page Not Found !!!!</h1>}/>
             </Routes>
